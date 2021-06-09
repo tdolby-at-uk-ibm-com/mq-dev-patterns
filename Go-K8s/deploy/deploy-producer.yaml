@@ -40,15 +40,15 @@ spec:
                 name: ibmmq-secret
                 key: APP_PASSWORD
           - name: QMGR
-            value: 'QM1' # Your queue manager
+            value: 'MQoC' # Your queue manager
           - name: QUEUE_NAME
-            value: 'DEMO.QUEUE' # Your queue name
+            value: 'SYSTEM.DEFAULT.LOCAL.QUEUE' # Your queue name
           - name: HOST
-            value: 'qm1-6d0c.qm2.eu-gb.mq.appdomain.cloud' # Your hostname
+            value: 'mqoc-419f.qm.eu-gb.mq.appdomain.cloud' # Your hostname
           - name: PORT
-            value: '31274' # Your port number
+            value: '31175' # Your port number
           - name: CHANNEL
-            value: 'CLOUD.APP.SVRCONN' # Your channel name
+            value: 'CLOUD.ADMIN.SVRCONN' # Your channel name
           - name: TOPIC_NAME
             value: 'dev/' # Your topic name
       restartPolicy: Never
