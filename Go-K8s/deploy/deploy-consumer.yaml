@@ -50,13 +50,13 @@ spec:
           - name: QMGR
             value: 'MQoC' # Your queue manager
           - name: QUEUE_NAME
-            value: 'SYSTEM.DEFAULT.LOCAL.QUEUE' # Your queue name
+            value: 'DEMO.QUEUE' # Your queue name
           - name: HOST
             value: 'mqoc-419f.qm.eu-gb.mq.appdomain.cloud' # Your hostname
           - name: PORT
             value: '31175' # Your port number
           - name: CHANNEL
-            value: 'CLOUD.ADMIN.SVRCONN' # Your channel name
+            value: 'CLOUD.APP.SVRCONN' # Your channel name
           - name: TOPIC_NAME
             value: 'dev/' # Your topic name
 ---
@@ -77,9 +77,9 @@ spec:
     - type: ibmmq
       metadata:
         queueDepth: '5' # Queue length target for HPA. Default: 5 messages
-        host: 'https://web-mqoc-419f.qm.eu-gb.mq.appdomain.cloud/ibmmq/rest/v2/admin/action/qmgr/MQoC/mqsc' # Your admin REST endpoint
+        host: 'https://web-mqoc-419f.qm.eu-gb.mq.appdomain.cloud/ibmmq/rest/v2/admin/qmgr/MQoC'
         queueManager: 'MQoC' # Your queue manager
-        queueName: 'SYSTEM.DEFAULT.LOCAL.QUEUE' # Your queue name
+        queueName: 'DEMO.QUEUE' # Your queue name
         tlsDisabled: 'false' # Set 'true' to disable TLS. Default: false
         usernameFromEnv: '' # Optional: Provide admin username from env instead of as a secret
         passwordFromEnv: '' # Optional: Provide admin password from env instead of as a secret
